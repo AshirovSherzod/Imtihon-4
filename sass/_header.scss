@@ -1,0 +1,117 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    &__top {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        justify-content: center;
+        // gap: 300px;
+        &__middle {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;      
+        }
+    }
+
+    &__bottom {
+        padding: 20px;
+        &__middle {
+            ul {
+                gap: 48px;
+            }
+        }
+        &__right {
+            gap: 30px;
+            form {
+                border-radius: 4px;
+                background: rgb(245, 245, 245);
+                border: 1px solid transparent;
+                padding: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                button {
+                    padding: 5px;
+                    border: none;
+                    background: rgb(245, 245, 245);
+
+                }
+            }
+            input {
+                outline: none;
+                border: none;
+                background: rgb(245, 245, 245);
+
+            }
+            &__burger {
+                display: none;
+                border: none;
+            }
+        }
+    }
+
+    &__for_bg_t {
+        background-color: black;
+    }
+    &__for_bg_b {
+        border-bottom: 1px solid gray;
+    }
+}
+
+@media (max-width: 1046px) {
+    .nav__bottom__middle {
+        display: none;
+    }
+
+    .nav__bottom__right__burger {
+        display: block;
+
+    }
+}
+
+@media (max-width: 720px) {
+    .nav__top__middle {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 630px) {
+    .nav__top__middle {
+        font-size: 10px;
+    }
+
+    .nav__bottom__right {
+        form {
+            padding: 0px;
+            font-size: 10px;
+            border: none;
+            input {
+                display: none;
+
+            }
+
+            button {
+                background: white;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 460px) {
+    .nav__bottom {
+        padding: 10px;
+    }
+    .nav__top {
+        padding: 5px;
+        font-size: 8px;
+        &__middle {
+            font-size: 8px;
+        }
+    }
+
+}
