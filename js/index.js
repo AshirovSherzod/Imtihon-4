@@ -29,7 +29,7 @@ function mapCards(data) {
                 <div class="products__cards__card__desc">
                     <h1 class="products__line__clamp">${product.title}</h1>
                     <div class="products__cards__card__dDesc">
-                        <p>$${product.price}</p>
+                        <p class="products__cards__card__price">$${product.price}</p>
                         <p>(${product.rating.count})</p>
                     </div>
                 </div>
