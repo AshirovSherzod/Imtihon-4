@@ -210,7 +210,7 @@ main {
     gap: 32px;
     background-image: url("../images/enhanse/enhanse-bg.png");
     padding: 70px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     h4 {
         color: rgb(0, 255, 102);
         font-size: 16px;
@@ -268,43 +268,38 @@ main {
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(2,1fr);
         grid-gap: 30px;
+        margin-bottom: 60px;
         color: white;
-        &__playstation {
+
+        &__playstation,
+        &__women,
+        &__speakers,
+        &__parfume {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             gap: 15px;
+        }
+        &__playstation {
             padding: 50px;
-            height: 600px;
+            height: 100%;
             background: url("../images/featured/featured-bg-1.png") no-repeat black center;
             grid-column: 1/3;
             grid-row: 1/3;
         }
         &__women {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            gap: 15px;
             padding: 50px;
             background: url("../images/featured/featured-bg-2.png") no-repeat black center;
             grid-column: 3/5;
             grid-row: 1/2;
         }
         &__speakers {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            gap: 15px;
             padding: 25px;
             background: url("../images/featured/featured-bg-3.png") no-repeat black center;
             grid-column: 3/4;
             grid-row: 2/3;
         }
         &__parfume {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            gap: 15px;
             padding: 25px;
             background: url("../images/featured/featured-bg-4.png") no-repeat black center;
             grid-column: 4/5;
@@ -313,12 +308,49 @@ main {
     }
 }
 
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    gap: 40px;
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px ;
+        &__img img {
+            width: 100%;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
+}
+
 @media (max-width: 1320px) {
     .enhance {
         padding: 50px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about__card {
+        h2 {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
     }
 }
 
@@ -370,10 +402,29 @@ main {
         background-position: percentage($number: 0);
     }
     .featured__bottom {
-        grid-template-columns: repeat(2,50%);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    .featured__bottom__playstation {
+        grid-column: 1/3;
+        grid-row: 1/3;   
+    }
+    .featured__bottom__women {
+        grid-column: 1/3;
+        grid-row: 3/4;
     }
     .featured__bottom__speakers {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .featured__bottom__parfume {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
 
+    .about {
+        flex-direction: column;
     }
 }
 
@@ -432,11 +483,20 @@ main {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
     .enhance {
         background-size: cover;
         &__date {
             gap: 10px;
         }
-    }   
+    } 
+    .featured__bottom__playstation,
+    .featured__bottom__women,
+    .featured__bottom__speakers,
+    .featured__bottom__parfume {
+        padding: 15px;
+        h2 {
+            font-size: 18px;
+        }
+    }  
 }

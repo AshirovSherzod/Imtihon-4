@@ -1,0 +1,182 @@
+.single {
+    margin-top: 100px;
+    &__card {
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+    }
+    .single__loading__img,
+    &__left img {
+        width: 500px;
+        height: 600px;
+        object-fit: contain;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &__title {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        &__btns {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        // &__delivery {
+
+        // }
+
+        &__sizebtns {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            button {
+                width: 32px;
+                height: 32px;
+                padding: 5px;
+                border-radius: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                background-color: white;
+                font-size: 14px;
+                font-weight: 600;
+                transition: .3s;
+            }
+
+            button:hover {
+                border: transparent;
+                transition: .3s;
+                color: white;
+                background-color: rgb(219, 68, 68);
+            }
+        }
+
+        &__CBL {
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+
+        }
+
+        &__counter {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+
+            button:nth-child(1),
+            button:nth-child(3) {
+                width: 40px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                font-size: 32px;
+                background-color: white;
+                border: 1px solid gray;
+            }
+
+            button:nth-child(1) {
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }            
+            button:nth-child(2) {
+                width: 80px;
+                height: 44px;
+                border-radius: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                border: 1px solid gray;
+            }
+            button:nth-child(3) {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+
+            button:nth-child(1):hover,
+            button:nth-child(3):hover {
+                border: transparent;
+                transition: .3s;
+                color: white;
+                background-color: rgb(219, 68, 68);
+            }
+
+        }
+        &__BL {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            button:nth-child(1){
+                width: 165px;
+                height: 44px;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                transition: .3s;
+                color: white;
+                background-color: rgb(219, 68, 68);
+            }
+
+            button:nth-child(2){
+                width: 40px;
+                height: 43px;
+                border-radius: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                background-color: white;
+            }            
+        }
+        // &__rating {
+
+        // }
+    }
+}
+
+@media (max-width: 1150px) {
+    .single__left img {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .single__card {
+        flex-direction: column;
+    }
+    .single__left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .single__right__BL {
+        gap: 5px;
+
+        button:nth-child(1){
+            width: 100px;
+        }
+
+        
+    }
+
+    .single__right__sizebtns {
+        gap: 10px;
+    }
+    .single__right__counter {  
+        button:nth-child(2) {
+            width: 50px;
+        }
+    }
+
+
+}

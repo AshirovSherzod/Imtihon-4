@@ -1,0 +1,13 @@
+.admin {
+    align-items: flex-start;
+    margin-top: 80px;
+    &__left {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+    &__right__form {
+        padding: 80px;
+        border: 1px solid gray;
+    }
+}

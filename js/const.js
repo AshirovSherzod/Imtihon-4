@@ -1,3 +1,9 @@
 export const API_URL = "https://fakestoreapi.com"
+export const API__URL = "https://fakestoreapi.com"
 export const productsCards = document.querySelector(".products__cards")
 export const seeMoreBtn = document.querySelector(".products__btns__seeMore")
+export const singleCard = document.querySelector(".single__card")
+export const inputUsername = document.querySelector(".input__username");
+export const inputPassword = document.querySelector(".input__password");
+export const form = document.querySelector(".form");
+export const hrefSignin = document.querySelector(".href__signin")
